@@ -1,0 +1,62 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_opportunities",
+  "info": {
+    "singularName": "job-opportunity",
+    "pluralName": "job-opportunities",
+    "displayName": "Job Opportunity",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "position": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string",
+      "required": true,
+      "default": "BETS BD"
+    },
+    "location": {
+      "type": "string",
+      "default": "Dhaka, Bangladesh",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "On-Site",
+        "Remote",
+        "Hybrid"
+      ]
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "responsibilities": {
+      "type": "richtext"
+    },
+    "requirements": {
+      "type": "richtext"
+    },
+    "conclusions": {
+      "type": "text"
+    },
+    "positionType": {
+      "type": "enumeration",
+      "enum": [
+        "Full-Time",
+        "Part-Time"
+      ]
+    },
+    "department": {
+      "type": "string"
+    },
+    "salary": {
+      "type": "string"
+    }
+  }
+}
