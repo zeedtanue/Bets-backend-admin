@@ -22,6 +22,8 @@ services:
         generateValue: true
       - key: ADMIN_JWT_SECRET
         value: 0ro0YQSMZPUeLlFRZRrhUA==
+      - key: API_TOKEN_SALT
+        value: WCvE5I99EYdY/+hBCUOjLw==
       - key: APP_KEYS
         value: hhnr5egJQIjrvRcexptGeQ==,pc7zhaDAKAc4l0ob+L7SGA==,K7NlDEwN1mgUJVmybJj1UA==,qKsA+mavUU7/PM/xQmCdOQ==
       - key: SENDGRID_API_KEY
