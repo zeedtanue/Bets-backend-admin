@@ -24,3 +24,12 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
+      - key: SENDGRID_API_KEY
+        value: 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
+      - key: CLOUDINARY_NAME
+        value: dwtx9bs6k
+      - key: CLOUDINARY_KEY
+        value: 439263995974692
+      - key: CLOUDINARY_SECRET
+        value: JCIuUXrROI8GLxqr4ROXsvoAkps
+
