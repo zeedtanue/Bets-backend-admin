@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feature_projects",
+  "info": {
+    "singularName": "feature-project",
+    "pluralName": "feature-projects",
+    "displayName": "Feature Projects ",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    },
+    "dateOfCompletion": {
+      "type": "date"
+    },
+    "shortDescription": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

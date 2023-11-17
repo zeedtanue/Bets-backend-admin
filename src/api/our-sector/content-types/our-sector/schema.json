@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_sectors",
+  "info": {
+    "singularName": "our-sector",
+    "pluralName": "our-sectors",
+    "displayName": "Our Sectors",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

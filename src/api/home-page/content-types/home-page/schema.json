@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "home_pages",
+  "info": {
+    "singularName": "home-page",
+    "pluralName": "home-pages",
+    "displayName": "Home Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "page_title": {
+      "type": "string"
+    },
+    "page_subtitle": {
+      "type": "string"
+    },
+    "complete_projects": {
+      "type": "biginteger"
+    },
+    "on_going_projects": {
+      "type": "biginteger"
+    },
+    "clients": {
+      "type": "biginteger"
+    },
+    "countries": {
+      "type": "integer"
+    },
+    "years_in_business": {
+      "type": "integer"
+    },
+    "latest_update": {
+      "type": "string"
+    },
+    "projects_abroad": {
+      "type": "integer"
+    },
+    "clients_logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

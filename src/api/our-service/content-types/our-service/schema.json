@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_services",
+  "info": {
+    "singularName": "our-service",
+    "pluralName": "our-services",
+    "displayName": "Our Services",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "serviceDetails": {
+      "type": "text"
+    },
+    "projects_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::projects-list.projects-list",
+      "mappedBy": "our_service"
+    }
+  }
+}
