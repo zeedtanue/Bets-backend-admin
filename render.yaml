@@ -16,8 +16,25 @@ services:
         value: ~18.16.1
       - key: NODE_ENV
         value: production
-      - key: DATABASE_FILENAME
-        value: /data/strapi.db
+      
+      - key: DATABASE_HOST
+        value: aws-0-us-west-1.pooler.supabase.com
+        
+      - key: DATABASE_NAME
+        value: postgres
+
+      - key: DATABASE_PORT
+        value: 5432
+
+      - key: DATABASE_SCHEMA
+        value: public
+
+      - key: DATABASE_USERNAME
+        value: postgres.bcaifizhtidzjmpxetlw
+
+      - key: DATABASE_PASSWORD
+        value: R.a.myfav22
+      
       - key: JWT_SECRET
         generateValue: true
       - key: ADMIN_JWT_SECRET
