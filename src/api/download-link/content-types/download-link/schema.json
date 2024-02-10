@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "download_links",
+  "info": {
+    "singularName": "download-link",
+    "pluralName": "download-links",
+    "displayName": "Footer Download Link",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "displayText": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

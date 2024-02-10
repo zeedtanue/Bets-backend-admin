@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "page_title": {
-      "type": "string"
-    },
-    "page_subtitle": {
-      "type": "string"
-    },
     "complete_projects": {
       "type": "biginteger"
     },
@@ -40,6 +34,17 @@
       "type": "integer"
     },
     "clients_logo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "funding_logo": {
       "type": "media",
       "multiple": true,
       "required": false,

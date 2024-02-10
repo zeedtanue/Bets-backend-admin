@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jumbotron_titles",
+  "info": {
+    "singularName": "jumbotron-title",
+    "pluralName": "jumbotron-titles",
+    "displayName": "Jumbotron Title- Front Page",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    }
+  }
+}

@@ -709,6 +709,38 @@ export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
   };
 }
 
+export interface ApiDownloadLinkDownloadLink extends Schema.CollectionType {
+  collectionName: 'download_links';
+  info: {
+    singularName: 'download-link';
+    pluralName: 'download-links';
+    displayName: 'Footer Download Link';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    displayText: Attribute.String;
+    url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::download-link.download-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::download-link.download-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFeatureProjectFeatureProject extends Schema.CollectionType {
   collectionName: 'feature_projects';
   info: {
@@ -756,8 +788,6 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    page_title: Attribute.String;
-    page_subtitle: Attribute.String;
     complete_projects: Attribute.BigInteger;
     on_going_projects: Attribute.BigInteger;
     clients: Attribute.BigInteger;
@@ -766,6 +796,7 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     latest_update: Attribute.String;
     projects_abroad: Attribute.Integer;
     clients_logo: Attribute.Media;
+    funding_logo: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -822,6 +853,38 @@ export interface ApiJobOpportunityJobOpportunity extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::job-opportunity.job-opportunity',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiJumbotronTitleJumbotronTitle extends Schema.CollectionType {
+  collectionName: 'jumbotron_titles';
+  info: {
+    singularName: 'jumbotron-title';
+    pluralName: 'jumbotron-titles';
+    displayName: 'Jumbotron Title- Front Page';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    subtitle: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::jumbotron-title.jumbotron-title',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::jumbotron-title.jumbotron-title',
       'oneToOne',
       'admin::user'
     > &
@@ -1064,9 +1127,11 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::contact-us-query.contact-us-query': ApiContactUsQueryContactUsQuery;
+      'api::download-link.download-link': ApiDownloadLinkDownloadLink;
       'api::feature-project.feature-project': ApiFeatureProjectFeatureProject;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::job-opportunity.job-opportunity': ApiJobOpportunityJobOpportunity;
+      'api::jumbotron-title.jumbotron-title': ApiJumbotronTitleJumbotronTitle;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
       'api::our-sector.our-sector': ApiOurSectorOurSector;
