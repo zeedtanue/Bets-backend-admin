@@ -54,6 +54,36 @@
         "videos",
         "audios"
       ]
+    },
+    "title_01": {
+      "type": "string"
+    },
+    "subtitle_01": {
+      "type": "string"
+    },
+    "title_02": {
+      "type": "string"
+    },
+    "subtitle_02": {
+      "type": "string"
+    },
+    "title_03": {
+      "type": "string"
+    },
+    "subtitle_03": {
+      "type": "string"
+    },
+    "title_04": {
+      "type": "string"
+    },
+    "subtitle_04": {
+      "type": "string"
+    },
+    "title_05": {
+      "type": "string"
+    },
+    "subtitle_05": {
+      "type": "string"
     }
   }
 }

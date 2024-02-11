@@ -797,6 +797,16 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     projects_abroad: Attribute.Integer;
     clients_logo: Attribute.Media;
     funding_logo: Attribute.Media;
+    title_01: Attribute.String;
+    subtitle_01: Attribute.String;
+    title_02: Attribute.String;
+    subtitle_02: Attribute.String;
+    title_03: Attribute.String;
+    subtitle_03: Attribute.String;
+    title_04: Attribute.String;
+    subtitle_04: Attribute.String;
+    title_05: Attribute.String;
+    subtitle_05: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -853,38 +863,6 @@ export interface ApiJobOpportunityJobOpportunity extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::job-opportunity.job-opportunity',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiJumbotronTitleJumbotronTitle extends Schema.CollectionType {
-  collectionName: 'jumbotron_titles';
-  info: {
-    singularName: 'jumbotron-title';
-    pluralName: 'jumbotron-titles';
-    displayName: 'Jumbotron Title- Front Page';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    subtitle: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::jumbotron-title.jumbotron-title',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::jumbotron-title.jumbotron-title',
       'oneToOne',
       'admin::user'
     > &
@@ -1131,7 +1109,6 @@ declare module '@strapi/types' {
       'api::feature-project.feature-project': ApiFeatureProjectFeatureProject;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::job-opportunity.job-opportunity': ApiJobOpportunityJobOpportunity;
-      'api::jumbotron-title.jumbotron-title': ApiJumbotronTitleJumbotronTitle;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
       'api::our-sector.our-sector': ApiOurSectorOurSector;
