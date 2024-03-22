@@ -677,6 +677,39 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAboutPageAboutPage extends Schema.SingleType {
+  collectionName: 'about_pages';
+  info: {
+    singularName: 'about-page';
+    pluralName: 'about-pages';
+    displayName: 'About Page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    leftText: Attribute.Text;
+    leftImage: Attribute.Media;
+    rightText: Attribute.String;
+    rightImage: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::about-page.about-page',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
   collectionName: 'contact_us_queries';
   info: {
@@ -863,6 +896,40 @@ export interface ApiJobOpportunityJobOpportunity extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::job-opportunity.job-opportunity',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiKeyPersonnelKeyPersonnel extends Schema.CollectionType {
+  collectionName: 'key_personnels';
+  info: {
+    singularName: 'key-personnel';
+    pluralName: 'key-personnels';
+    displayName: 'About Key Personnel';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String & Attribute.Required;
+    image: Attribute.Media & Attribute.Required;
+    details: Attribute.RichText & Attribute.Required;
+    position: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::key-personnel.key-personnel',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::key-personnel.key-personnel',
       'oneToOne',
       'admin::user'
     > &
@@ -1104,11 +1171,13 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::about-page.about-page': ApiAboutPageAboutPage;
       'api::contact-us-query.contact-us-query': ApiContactUsQueryContactUsQuery;
       'api::download-link.download-link': ApiDownloadLinkDownloadLink;
       'api::feature-project.feature-project': ApiFeatureProjectFeatureProject;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::job-opportunity.job-opportunity': ApiJobOpportunityJobOpportunity;
+      'api::key-personnel.key-personnel': ApiKeyPersonnelKeyPersonnel;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
       'api::our-sector.our-sector': ApiOurSectorOurSector;

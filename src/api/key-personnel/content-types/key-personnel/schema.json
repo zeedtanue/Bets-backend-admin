@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "key_personnels",
+  "info": {
+    "singularName": "key-personnel",
+    "pluralName": "key-personnels",
+    "displayName": "About Key Personnel",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "details": {
+      "type": "richtext",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
