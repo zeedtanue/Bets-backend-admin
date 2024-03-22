@@ -683,6 +683,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
     singularName: 'about-page';
     pluralName: 'about-pages';
     displayName: 'About Page';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -690,7 +691,7 @@ export interface ApiAboutPageAboutPage extends Schema.SingleType {
   attributes: {
     leftText: Attribute.Text;
     leftImage: Attribute.Media;
-    rightText: Attribute.String;
+    rightText: Attribute.Text;
     rightImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
