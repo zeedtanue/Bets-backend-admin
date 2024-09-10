@@ -1064,6 +1064,7 @@ export interface ApiOurServiceOurService extends Schema.CollectionType {
       'oneToMany',
       'api::projects-list.projects-list'
     >;
+    jumboTron: Attribute.Media & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
