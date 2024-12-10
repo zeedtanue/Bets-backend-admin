@@ -1013,37 +1013,6 @@ export interface ApiNewsCategoryNewsCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiOurSectorOurSector extends Schema.CollectionType {
-  collectionName: 'our_sectors';
-  info: {
-    singularName: 'our-sector';
-    pluralName: 'our-sectors';
-    displayName: 'Our Sectors';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String;
-    thumbnail: Attribute.Media & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::our-sector.our-sector',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::our-sector.our-sector',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiOurServiceOurService extends Schema.CollectionType {
   collectionName: 'our_services';
   info: {
@@ -1065,6 +1034,7 @@ export interface ApiOurServiceOurService extends Schema.CollectionType {
       'api::projects-list.projects-list'
     >;
     jumboTron: Attribute.Media & Attribute.Required;
+    priority_number: Attribute.Integer & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1182,7 +1152,6 @@ declare module '@strapi/types' {
       'api::key-personnel.key-personnel': ApiKeyPersonnelKeyPersonnel;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
-      'api::our-sector.our-sector': ApiOurSectorOurSector;
       'api::our-service.our-service': ApiOurServiceOurService;
       'api::projects-list.projects-list': ApiProjectsListProjectsList;
       'api::useful-link.useful-link': ApiUsefulLinkUsefulLink;
