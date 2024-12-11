@@ -841,6 +841,11 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     subtitle_04: Attribute.String;
     title_05: Attribute.String;
     subtitle_05: Attribute.String;
+    button_link_01: Attribute.String;
+    button_link_02: Attribute.String;
+    button_link_03: Attribute.String;
+    button_link_04: Attribute.String;
+    button_link_05: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

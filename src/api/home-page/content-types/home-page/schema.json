@@ -84,6 +84,21 @@
     },
     "subtitle_05": {
       "type": "string"
+    },
+    "button_link_01": {
+      "type": "string"
+    },
+    "button_link_02": {
+      "type": "string"
+    },
+    "button_link_03": {
+      "type": "string"
+    },
+    "button_link_04": {
+      "type": "string"
+    },
+    "button_link_05": {
+      "type": "string"
     }
   }
 }
