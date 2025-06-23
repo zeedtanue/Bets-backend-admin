@@ -1018,6 +1018,39 @@ export interface ApiNewsCategoryNewsCategory extends Schema.CollectionType {
   };
 }
 
+export interface ApiOurPolicyOurPolicy extends Schema.CollectionType {
+  collectionName: 'our_policies';
+  info: {
+    singularName: 'our-policy';
+    pluralName: 'our-policies';
+    displayName: 'Our Policies';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    thumbnail: Attribute.Media & Attribute.Required;
+    pdf: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::our-policy.our-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::our-policy.our-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiOurServiceOurService extends Schema.CollectionType {
   collectionName: 'our_services';
   info: {
@@ -1157,6 +1190,7 @@ declare module '@strapi/types' {
       'api::key-personnel.key-personnel': ApiKeyPersonnelKeyPersonnel;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
+      'api::our-policy.our-policy': ApiOurPolicyOurPolicy;
       'api::our-service.our-service': ApiOurServiceOurService;
       'api::projects-list.projects-list': ApiProjectsListProjectsList;
       'api::useful-link.useful-link': ApiUsefulLinkUsefulLink;

@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "our_policies",
+  "info": {
+    "singularName": "our-policy",
+    "pluralName": "our-policies",
+    "displayName": "Our Policies",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}

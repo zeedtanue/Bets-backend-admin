@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
-    "moduleResolution": "nodenext",
-    "target": "ES2021",
-    "checkJs": true,
-    "allowJs": true
+    "module": "NodeNext",              // REQUIRED when using nodenext resolution
+    "moduleResolution": "nodenext",   // Resolves modules like modern Node.js
+    "target": "ES2021",                // Sets the output JS version
+    "checkJs": true,                   // Enables JS type checking
+    "allowJs": true                    // Allows JS files in the project
   }
 }
