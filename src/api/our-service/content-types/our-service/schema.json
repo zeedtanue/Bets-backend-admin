@@ -33,12 +33,17 @@
       "mappedBy": "our_service"
     },
     "jumboTron": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "priority_number": {
+      "type": "integer",
+      "required": true,
+      "unique": true
     }
   }
 }

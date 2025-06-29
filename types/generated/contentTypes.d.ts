@@ -717,6 +717,7 @@ export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
     singularName: 'contact-us-query';
     pluralName: 'contact-us-queries';
     displayName: 'contact us query';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -724,7 +725,7 @@ export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     email: Attribute.Email;
-    message: Attribute.Text;
+    message: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -841,6 +842,11 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     subtitle_04: Attribute.String;
     title_05: Attribute.String;
     subtitle_05: Attribute.String;
+    button_link_01: Attribute.String;
+    button_link_02: Attribute.String;
+    button_link_03: Attribute.String;
+    button_link_04: Attribute.String;
+    button_link_05: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1013,37 +1019,6 @@ export interface ApiNewsCategoryNewsCategory extends Schema.CollectionType {
   };
 }
 
-export interface ApiOurSectorOurSector extends Schema.CollectionType {
-  collectionName: 'our_sectors';
-  info: {
-    singularName: 'our-sector';
-    pluralName: 'our-sectors';
-    displayName: 'Our Sectors';
-    description: '';
-  };
-  options: {
-    draftAndPublish: false;
-  };
-  attributes: {
-    title: Attribute.String;
-    thumbnail: Attribute.Media & Attribute.Required;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::our-sector.our-sector',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::our-sector.our-sector',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiOurServiceOurService extends Schema.CollectionType {
   collectionName: 'our_services';
   info: {
@@ -1065,6 +1040,7 @@ export interface ApiOurServiceOurService extends Schema.CollectionType {
       'api::projects-list.projects-list'
     >;
     jumboTron: Attribute.Media & Attribute.Required;
+    priority_number: Attribute.Integer & Attribute.Required & Attribute.Unique;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1095,7 +1071,7 @@ export interface ApiProjectsListProjectsList extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    projectTitle: Attribute.String & Attribute.Required;
+    projectTitle: Attribute.Text & Attribute.Required;
     country: Attribute.String & Attribute.Required;
     execAgency: Attribute.Text;
     period: Attribute.String & Attribute.Required;
@@ -1182,7 +1158,6 @@ declare module '@strapi/types' {
       'api::key-personnel.key-personnel': ApiKeyPersonnelKeyPersonnel;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
-      'api::our-sector.our-sector': ApiOurSectorOurSector;
       'api::our-service.our-service': ApiOurServiceOurService;
       'api::projects-list.projects-list': ApiProjectsListProjectsList;
       'api::useful-link.useful-link': ApiUsefulLinkUsefulLink;
