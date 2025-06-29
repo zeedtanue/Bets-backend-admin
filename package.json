@@ -20,7 +20,11 @@
     "@strapi/strapi": "4.14.0",
     "axios": "^1.10.0",
     "better-sqlite3": "8.6.0",
+<<<<<<< HEAD
     "nodemailer": "^7.0.3",
+=======
+    "dotenv": "^16.4.5",
+>>>>>>> cdf5965 (Backup local changes before pulling from origin)
     "pg": "^8.11.3"
   },
   "author": {
