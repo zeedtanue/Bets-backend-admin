@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "projectTitle": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "country": {
@@ -34,14 +34,15 @@
       "type": "biginteger"
     },
     "details_pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "our_service": {
       "type": "relation",
