@@ -4,8 +4,7 @@
   "info": {
     "singularName": "contact-us-query",
     "pluralName": "contact-us-queries",
-    "displayName": "contact us query",
-    "description": ""
+    "displayName": "contact us query"
   },
   "options": {
     "draftAndPublish": true
@@ -19,8 +18,7 @@
       "type": "email"
     },
     "message": {
-      "type": "text",
-      "required": true
+      "type": "text"
     }
   }
 }

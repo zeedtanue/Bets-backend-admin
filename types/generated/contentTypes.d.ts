@@ -717,7 +717,6 @@ export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
     singularName: 'contact-us-query';
     pluralName: 'contact-us-queries';
     displayName: 'contact us query';
-    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -725,7 +724,7 @@ export interface ApiContactUsQueryContactUsQuery extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     email: Attribute.Email;
-    message: Attribute.Text & Attribute.Required;
+    message: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1019,7 +1018,6 @@ export interface ApiNewsCategoryNewsCategory extends Schema.CollectionType {
   };
 }
 
-<<<<<<< HEAD
 export interface ApiOurPolicyOurPolicy extends Schema.CollectionType {
   collectionName: 'our_policies';
   info: {
@@ -1053,8 +1051,6 @@ export interface ApiOurPolicyOurPolicy extends Schema.CollectionType {
   };
 }
 
-=======
->>>>>>> cdf5965 (Backup local changes before pulling from origin)
 export interface ApiOurServiceOurService extends Schema.CollectionType {
   collectionName: 'our_services';
   info: {
@@ -1107,7 +1103,7 @@ export interface ApiProjectsListProjectsList extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    projectTitle: Attribute.Text & Attribute.Required;
+    projectTitle: Attribute.String & Attribute.Required;
     country: Attribute.String & Attribute.Required;
     execAgency: Attribute.Text;
     period: Attribute.String & Attribute.Required;
@@ -1194,10 +1190,7 @@ declare module '@strapi/types' {
       'api::key-personnel.key-personnel': ApiKeyPersonnelKeyPersonnel;
       'api::news-and-update.news-and-update': ApiNewsAndUpdateNewsAndUpdate;
       'api::news-category.news-category': ApiNewsCategoryNewsCategory;
-<<<<<<< HEAD
       'api::our-policy.our-policy': ApiOurPolicyOurPolicy;
-=======
->>>>>>> cdf5965 (Backup local changes before pulling from origin)
       'api::our-service.our-service': ApiOurServiceOurService;
       'api::projects-list.projects-list': ApiProjectsListProjectsList;
       'api::useful-link.useful-link': ApiUsefulLinkUsefulLink;
