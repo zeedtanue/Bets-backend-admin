@@ -11,7 +11,7 @@ module.exports = {
 
     try {
       await strapi.plugins['email'].services.email.send({
-        to: 'zeedtanue@gmail.com',
+        to: 'compliance@betsbd.com',
         from: 'tamzeed73@gmail.com',
         subject: '🕵️ New Whistleblower Submission',
         text: `Message:\n${message}\n\nSender: ${email || 'Anonymous'}`,
